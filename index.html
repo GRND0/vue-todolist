@@ -12,6 +12,12 @@
 </head>
 <body>
     <div id="root">
+        <div>
+            <input type="text" placeholder="Nuova Attività" v-model="nuovoElementoLista">
+            <button @click="aggiungi">
+                Aggiungi 
+            </button>
+        </div>
         <ul>
             <li v-for="(item, index) in dafare" :class="{ barrato : item.done }">
                 {{item.text}}

@@ -20,9 +20,20 @@ const app = new Vue (
                     done: false
                 },
             ],
+           
+            nuovoElementoLista : "",
         },
 
         methods: { 
+            aggiungi: function() {
+                nuovoOggetto = {};
+                nuovoOggetto["text"] = this.nuovoElementoLista;
+                nuovoOggetto["done"] = true;
+                this.dafare.push(nuovoOggetto) ;
+                 
+
+            },
+
             rimuovi: function(index) {
                 this.dafare.splice(index,1);
             },
